@@ -14,7 +14,7 @@ const UploadModal = () => {
       isOpen={isOpen}
       onChange={onChange}
     >
-      Upload Content
+      Upload Content..
     </Modal>
   );
 };
