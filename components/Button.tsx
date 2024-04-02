@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
+//ForwardRef enables us to safely reuse all the attributes available in the navitve button element
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, children, disabled, type = "button", ...props }, ref) => {
     return (
