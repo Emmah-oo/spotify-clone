@@ -19,9 +19,16 @@ const getLikedSongs = async (): Promise<Song[]> => {
 
   if (error) {
     console.log(error);
+    return [];
   }
 
-  return (data as any) || [];
+  if (!data) {
+    return [];
+  }
+
+  return data.map((item) => ({
+    ...item.songs,
+  }));
 };
 
 export default getLikedSongs;
