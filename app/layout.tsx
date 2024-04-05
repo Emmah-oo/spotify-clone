@@ -16,15 +16,15 @@ export const metadata: Metadata = {
   description: "Listen to music",
 };
 
-export const revalidate = 0
+export const revalidate = 0;
 
 export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const userSongs = await getSongsByUserId();
 
-  const userSongs = await getSongsByUserId()
   return (
     <html lang="en">
       <body className={font.className}>
