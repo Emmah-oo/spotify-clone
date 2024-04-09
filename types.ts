@@ -25,7 +25,7 @@ export interface Product {
   name?: string;
   description?: string;
   image?: string;
-  metastore?: Stripe.Metadata;
+  metadata?: Stripe.Metadata;
 }
 
 export interface Price {

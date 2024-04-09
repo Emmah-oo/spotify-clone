@@ -29,7 +29,7 @@ export const postData = async ({
 }) => {
   console.log("POST REQUEST:", url, data);
 
-  // Send a POST request using the fetch AP
+  // Send a POST request using the fetch API
   const res: Response = await fetch(url, {
     method: "POST",
     headers: new Headers({ "Content-Type": "application/json" }),
@@ -46,4 +46,16 @@ export const postData = async ({
 
   // Return the response data parsed as JSON
   return res.json();
+};
+
+// Define a function named toDateTime to convert seconds to a Date object
+export const toDateTime = (secs: number) => {
+  // Create a new Date object with a base date of "1970-01-01T00:30:00Z"
+  var t = new Date("1970-01-01T00:30:00Z");
+
+  // Set the seconds of the Date object to the provided value
+  t.setSeconds(secs);
+
+  // Return the updated Date object
+  return t;
 };
